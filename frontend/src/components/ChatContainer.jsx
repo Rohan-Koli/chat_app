@@ -12,11 +12,11 @@ function ChatContainer() {
   useEffect(()=>{
     getMessages(selectedUser._id)
     subscribeToMessages();
-
     return () =>unsubscribeToMessages()
   },[selectedUser._id,getMessages,subscribeToMessages,unsubscribeToMessages])
 
   useEffect(()=>{
+    // subscribeToMessages();
     if(messageEndRef.current && messages){
       messageEndRef.current.scrollIntoView({behavior:"smooth"})
     }
@@ -35,8 +35,8 @@ function ChatContainer() {
     <div className='flex-1 flex flex-col overflow-auto'>
       <ChatHeader />
       <div className='flex-1 overflow-auto p-4 space-y-4'>
-      {messages.map((message)=>(
-        <div key={message._id} className={`chat ${message.senderId=== authUser._id ? "chat-end" :"chat-start"}`}
+      {messages.map((message,index)=>(
+        <div key={index} className={`chat ${message.senderId=== authUser._id ? "chat-end" :"chat-start"}`}
         ref={messageEndRef}
         >
          

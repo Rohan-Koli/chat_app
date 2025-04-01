@@ -33,7 +33,6 @@ function MessageInput() {
         text :text.trim(),
         image:imagePreview
       })
-      subscribeToMessages()
       setText("")
       setImagePreview(null)
       if(fileInputRef.current) fileInputRef.current.value=""
