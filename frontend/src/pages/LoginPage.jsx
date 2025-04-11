@@ -90,13 +90,13 @@ function LoginPage() {
                 Loading...
                 </>
               ) : (
-                "Create Account"
+                "Log in"
               )}
             </button>
           </form>
           <div className='text-center'>
             <p className='text-base-content/60'>
-              Already have an  account?
+              Don't have an account?
               <Link to="/signup" className='link link-primary' >
               Sign in
               </Link>
