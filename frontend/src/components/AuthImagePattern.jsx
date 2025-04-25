@@ -1,10 +1,10 @@
 import React from 'react';
-
+import login from "../assets/login.svg"
 function AuthImagePattern({ title, subtitle }) {
   return (
     <div className="hidden lg:flex items-center justify-center bg-base-200 p-12">
       <div className="max-w-md text-center">
-        <div className="grid grid-cols-3 gap-3 mb-8">
+        {/* <div className="grid grid-cols-3 gap-3 mb-8">
           {[...Array(9)].map((_, i) => (
             <div
               key={i}
@@ -14,7 +14,8 @@ function AuthImagePattern({ title, subtitle }) {
               }`}
             />
           ))}
-        </div>
+        </div> */}
+        <img src={login} className='w-full h-1/2 p-4' alt='login img'/>
         <h2 className="text-2xl font-bold mb-4">{title}</h2>
         <p className="text-base-content/60">{subtitle}</p>
       </div>
