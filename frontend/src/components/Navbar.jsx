@@ -19,15 +19,15 @@ function Navbar() {
             </Link>
           </div>
           <div className=' flex items-center gap-2'>
-            <Link to={"/settings"}
+            {/* <Link to={"/settings"}
             className='btn btn-sm gap-2 transition-colors'>
               <Settings className=' size-4'/>
               <span className='hidden sm:inline'>Setings</span>
-            </Link>
+            </Link> */}
 
             {authUser && (
               <>
-              <Link to={"/profile"} className='btn btn-sm gap-2'>
+              <Link to={"/profile"} className='flex gap-2 mx-3 items-center'>
                 <User className='size-5' />
                 <span className=' hidden sm:inline'>Profile</span>
               </Link>

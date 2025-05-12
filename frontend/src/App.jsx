@@ -29,7 +29,7 @@ function App() {
         <Route path="/signup" element={!authUser ?<SignUpPage /> :<Navigate to="/"/>} />
         <Route path="/login" element={!authUser ? <LoginPage /> : <Navigate to="/"/>} />
         <Route path="/profile" element={<ProfilePage />} />
-        <Route path="/settings" element={authUser ? <SettingsPage /> :<Navigate to="login" /> } />
+        {/* <Route path="/settings" element={authUser ? <SettingsPage /> :<Navigate to="login" /> } /> */}
       </Routes>
       <Toaster position="top-center"
   reverseOrder={false}/>
